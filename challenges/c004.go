@@ -10,12 +10,12 @@ func init() {
 	Challenges[4] = Challenge{
 		Title:    "Largest palindrome product",
 		Correct:  true,
-		Callback: c004,
+		Callback: C004,
 		ID:       4,
 	}
 }
 
-func c004() (interface{}, error) {
+func C004() (interface{}, error) {
 	biggest := 0
 
 	for a := 999; a >= 100; a-- {

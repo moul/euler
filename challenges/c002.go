@@ -4,12 +4,12 @@ func init() {
 	Challenges[2] = Challenge{
 		Title:    "Even Fibonacci numbers",
 		Correct:  true,
-		Callback: c002,
+		Callback: C002,
 		ID:       2,
 	}
 }
 
-func c002() (interface{}, error) {
+func C002() (interface{}, error) {
 	sum := 0
 
 	left := 1
