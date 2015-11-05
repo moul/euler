@@ -1,9 +1,6 @@
 package utils
 
-import (
-	"fmt"
-	"math/big"
-)
+import "math/big"
 
 func PrimeFactors(input int) []int {
 	output := []int{}
@@ -13,7 +10,6 @@ func PrimeFactors(input int) []int {
 	for i := 2; i < current; i++ {
 		if current%i == 0 {
 			current /= i
-			fmt.Println(current)
 			output = append(output, i)
 		}
 	}
