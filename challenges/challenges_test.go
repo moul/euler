@@ -82,8 +82,10 @@ func ExampleC050() {
 	// Output: 997651
 }
 
+/* slow
 func ExampleC206() {
 	result, _ := C206()
 	fmt.Println(result)
 	// Output: 1389019170
 }
+*/
