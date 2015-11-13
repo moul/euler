@@ -7,7 +7,7 @@ import (
 
 func init() {
 	Challenges[11] = Challenge{
-		Title:    "Summation of primes",
+		Title:    "Largest product in a grid",
 		Correct:  true,
 		Callback: C011,
 		ID:       11,
