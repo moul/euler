@@ -1,6 +1,10 @@
 package challenges
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/moul/euler/utils"
+)
 
 func init() {
 	Challenges[23] = Challenge{
@@ -11,17 +15,7 @@ func init() {
 	}
 }
 
-func GetDivisors(input int) []int {
-	ret := []int{}
-	for i := 1; i < input/2; i++ {
-		if input%i == 0 {
-			ret = append(ret, i, input/i)
-		}
-	}
-	return ret
-}
-
 func C023() (interface{}, error) {
-	fmt.Println(GetDivisors(28))
+	fmt.Println(utils.GetDivisors(28))
 	return nil, fmt.Errorf("No such answer")
 }
