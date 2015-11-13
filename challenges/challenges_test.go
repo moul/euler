@@ -99,6 +99,20 @@ func ExampleC016() {
 }
 
 /*
+func ExampleC017() {
+	result, _ := C017()
+	fmt.Println(result)
+	// Output: 21124
+}
+*/
+
+func ExampleC018() {
+	result, _ := C018()
+	fmt.Println(result)
+	// Output: 1074
+}
+
+/*
 func ExampleC026() {
 	result, _ := C026()
 	fmt.Println(result)
