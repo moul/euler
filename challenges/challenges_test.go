@@ -122,12 +122,12 @@ func ExampleC023() {
 */
 
 /*
+// SLOW (2.85s)
 func ExampleC026() {
 	result, _ := C026()
 	fmt.Println(result)
-	// Output: XXX
+	// Output: 983
 }
-*/
 
 func ExampleC031() {
 	result, _ := C031()

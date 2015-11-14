@@ -10,8 +10,8 @@ func ReverseString(s string) string {
 	return string(r)
 }
 
-func LongestRecurringCycleInString(str string) int {
-	for size := 1; size < len(str)/2; size++ {
+func LongestRecurringCycleInString(str string, min int) int {
+	for size := min; size < len(str)/2; size++ {
 		target := strings.Repeat(str[:size], len(str)/size)
 		if strings.Index(str, target) == 0 {
 			return size
