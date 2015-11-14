@@ -1,10 +1,6 @@
 package challenges
 
-import (
-	"fmt"
-
-	"github.com/moul/euler/utils"
-)
+import "github.com/moul/euler/utils"
 
 func init() {
 	Challenges[23] = Challenge{
@@ -16,6 +12,42 @@ func init() {
 }
 
 func C023() (interface{}, error) {
-	fmt.Println(utils.GetDivisors(28))
-	return nil, fmt.Errorf("No such answer")
+	upperLimit := 28123
+
+	numbers := map[int]bool{}
+	for i := 1; i < upperLimit; i++ {
+		numbers[i] = true
+	}
+
+	abundantNumbers := []int{}
+	for i := 2; i < upperLimit; i++ {
+		divisors := utils.GetDivisors(i)
+		sumDivisors := 0
+		for _, divisor := range divisors[:len(divisors)-1] {
+			sumDivisors += divisor
+		}
+		if sumDivisors > i {
+			abundantNumbers = append(abundantNumbers, i)
+		}
+	}
+
+	abundantNumbersLen := len(abundantNumbers)
+
+	for i := 0; i < abundantNumbersLen; i++ {
+		for j := i; j < abundantNumbersLen; j++ {
+			abundantNumbersSum := abundantNumbers[i] + abundantNumbers[j]
+			if _, found := numbers[abundantNumbersSum]; found {
+				numbers[abundantNumbersSum] = false
+			}
+		}
+	}
+
+	sumNonAbundant := 0
+	for number, isNotSum := range numbers {
+		if isNotSum {
+			sumNonAbundant += number
+		}
+	}
+
+	return sumNonAbundant, nil
 }
