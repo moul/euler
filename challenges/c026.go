@@ -3,6 +3,8 @@ package challenges
 import (
 	"fmt"
 	"math/big"
+
+	"github.com/moul/euler/utils"
 )
 
 func init() {
@@ -15,10 +17,21 @@ func init() {
 }
 
 func C026() (interface{}, error) {
-	for i := int64(2); i < int64(1000); i++ {
+	longestSize := 0
+	var longestNumber int64
+
+	for i := int64(2); i < 1000; i++ {
 		rat := big.NewRat(1, i)
-		fmt.Println(i, rat.FloatString(500))
+		floatString := rat.FloatString(500)
+		cycleSize := utils.LongestRecurringCycleInString(utils.ReverseString(floatString[10:]))
+
+		// fmt.Println(i, floatString, cycleSize)
+		if cycleSize > longestSize {
+			fmt.Println(i, cycleSize, floatString)
+			longestSize = cycleSize
+			longestNumber = i
+		}
 	}
 
-	return nil, nil
+	return longestNumber, nil
 }
