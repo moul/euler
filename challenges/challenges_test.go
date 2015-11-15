@@ -172,6 +172,12 @@ func ExampleC041() {
 }
 */
 
+func ExampleC046() {
+	result, _ := C046()
+	fmt.Println(result)
+	// Output: 5777
+}
+
 func ExampleC050() {
 	result, _ := C050()
 	fmt.Println(result)
