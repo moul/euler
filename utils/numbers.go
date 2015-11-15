@@ -6,10 +6,11 @@ import (
 )
 
 func IsPandigital(nbStr string) bool {
-	if len(nbStr) != 9 {
+	length := len(nbStr)
+	if length > 9 {
 		return false
 	}
-	for i := 1; i <= 9; i++ {
+	for i := 1; i <= length; i++ {
 		if !strings.Contains(nbStr, strconv.Itoa(i)) {
 			return false
 		}

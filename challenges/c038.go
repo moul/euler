@@ -22,7 +22,7 @@ func C038() (interface{}, error) {
 		for right := 1; right < 9 && len(output) < 9; right++ {
 			output += strconv.Itoa(left * right)
 		}
-		if utils.IsPandigital(output) {
+		if len(output) == 9 && utils.IsPandigital(output) {
 			nb, _ := strconv.Atoi(output)
 			// fmt.Println(left, nb)
 			if nb > max {
