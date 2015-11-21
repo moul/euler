@@ -131,6 +131,15 @@ func ExampleC021() {
 }
 
 /*
+// failed to load relative asset path
+func ExampleC022() {
+	result, _ := C022()
+	fmt.Println(result)
+	// Output: 871198282
+}
+*/
+
+/*
 // SLOW (1.5s)
 func ExampleC023() {
 	result, _ := C023()
