@@ -17,3 +17,24 @@ func IsPandigital(nbStr string) bool {
 	}
 	return true
 }
+
+func IntPow(a, b int) int {
+	nb := 1
+	for i := 0; i < b; i++ {
+		nb *= a
+	}
+	return nb
+}
+
+func NumberDigits(number int) []int {
+	digits := []int{}
+	for number > 0 {
+		digits = append(digits, number%10)
+		number /= 10
+	}
+	for i, j := 0, len(digits)-1; i < j; i, j = i+1, j-1 {
+		digits[i], digits[j] = digits[j], digits[i]
+	}
+
+	return digits
+}
