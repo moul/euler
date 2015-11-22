@@ -5,7 +5,7 @@ import "github.com/moul/euler/utils"
 func init() {
 	Challenges[23] = Challenge{
 		Title:    "Non-abundant sums",
-		Correct:  false,
+		Correct:  true,
 		Callback: C023,
 		ID:       23,
 	}
