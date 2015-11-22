@@ -9,7 +9,7 @@ import (
 func init() {
 	Challenges[26] = Challenge{
 		Title:    "Reciprocal cycles",
-		Correct:  false,
+		Correct:  true,
 		Callback: C026,
 		ID:       26,
 	}
