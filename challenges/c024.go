@@ -9,7 +9,7 @@ import (
 func init() {
 	Challenges[24] = Challenge{
 		Title:    "Lexicographic permutations",
-		Correct:  false,
+		Correct:  true,
 		Callback: C024,
 		ID:       24,
 	}
