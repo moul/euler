@@ -252,6 +252,15 @@ func ExampleC039() {
 
 /*
 // SLOW (30s)
+func ExampleC040() {
+	result, _ := C040()
+	fmt.Println(result)
+	// Output: 210
+}
+*/
+
+/*
+// SLOW (30s)
 func ExampleC041() {
 	result, _ := C041()
 	fmt.Println(result)
