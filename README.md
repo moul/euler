@@ -3,7 +3,7 @@
 
 [![GoDoc](https://godoc.org/github.com/moul/euler?status.svg)](https://godoc.org/github.com/moul/euler)
 [![Build Status](https://travis-ci.org/moul/euler.svg?branch=master)](https://travis-ci.org/moul/euler)
-[![Coverage Status](https://coveralls.io/repos/moul/euler/badge.svg?branch=master&service=github)](https://coveralls.io/github/moul/euler?branch=master)
+[![Coverage Status](https://coveralls.io/repos/moul/euler/badge.svg?branch=master&service=github)](https://coveralls.io/github/moul/euler?branch=master) [![GuardRails badge](https://badges.production.guardrails.io/moul/euler.svg)](https://www.guardrails.io)
 
 ## Example
 
