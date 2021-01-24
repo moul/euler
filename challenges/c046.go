@@ -3,7 +3,7 @@ package challenges
 import (
 	"fmt"
 
-	"github.com/moul/euler/utils"
+	"moul.io/euler/utils"
 )
 
 func init() {

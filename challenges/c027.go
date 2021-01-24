@@ -1,6 +1,6 @@
 package challenges
 
-import "github.com/moul/euler/utils"
+import "moul.io/euler/utils"
 
 func init() {
 	Challenges[27] = Challenge{

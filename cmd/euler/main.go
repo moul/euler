@@ -5,10 +5,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 	"github.com/jessevdk/go-flags"
 
-	"github.com/moul/euler/challenges"
+	"moul.io/euler/challenges"
 )
 
 func main() {

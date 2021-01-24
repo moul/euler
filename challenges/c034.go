@@ -4,7 +4,7 @@ import (
 	"math/big"
 	"strconv"
 
-	"github.com/moul/euler/utils"
+	"moul.io/euler/utils"
 )
 
 func init() {
