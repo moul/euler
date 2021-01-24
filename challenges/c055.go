@@ -2,6 +2,7 @@ package challenges
 
 import (
 	"fmt"
+	"math/big"
 
 	"moul.io/euler/utils"
 )
@@ -15,26 +16,26 @@ func init() {
 	}
 }
 
-func isLychrel(input int) bool {
-	last := input
+func isLychrel(input int64) bool {
+	last := big.NewInt(input)
 	for i := 0; i < 50; i++ {
-		rev := utils.ReverseNumber(last)
-		sum := last + rev
-		check := utils.IsPalindromeNumber(sum)
-		fmt.Println(input, i, last, rev, sum, check)
+		rev := utils.ReverseBigInt(last)
+		sum := big.NewInt(0)
+		sum.Add(last, rev)
+		check := utils.IsPalindromeBigInt(sum)
+		// fmt.Println(input, i, last, rev, sum, check)
 		if check {
-			fmt.Println()
-			return true
+			return false
 		}
 		last = sum
 	}
-	return false
+	return true
 }
 
 func C055() (interface{}, error) {
 	sum := 0
-	for i := 194; i < 10000; i++ {
-		check := isLychrel(i)
+	for i := 0; i < 10000; i++ {
+		check := isLychrel(int64(i))
 		fmt.Println(i, check, sum)
 		if check {
 			sum++
