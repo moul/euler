@@ -38,3 +38,16 @@ func NumberDigits(number int) []int {
 
 	return digits
 }
+
+func ReverseNumber(number int) int {
+	str := strconv.Itoa(number)
+	revStr := ReverseString(str)
+	revNum, err := strconv.Atoi(revStr)
+	checkErr(err)
+	return revNum
+}
+
+func IsPalindromeNumber(number int) bool {
+	str := strconv.Itoa(number)
+	return str == ReverseString(str)
+}
